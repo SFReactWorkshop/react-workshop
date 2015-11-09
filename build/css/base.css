@@ -1,0 +1,38 @@
+body {
+  background: #fff;
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-size: 15px;
+  line-height: 1.7;
+}
+
+.jumbotron {
+  background-color: mediumaquamarine; 
+  color: white;
+  margin-bottom: 0px;
+}
+
+.jumbotron > .container {
+  text-align: center; 
+  padding: 50px 0px;
+}
+
+.container {
+  margin: 0px;
+  padding: 25px;
+  width: 100%;
+}
+
+.small-apps > :not(:first-child) {
+  margin-top: 20px;
+  padding-top: 20px;
+  border-top: 1px solid #ddd;
+}
+
+.large-app {
+  padding-left: 40px;
+}
+
+.tweetForm {
+  margin: 20px 0px;
+}
+

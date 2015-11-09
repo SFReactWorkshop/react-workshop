@@ -1,0 +1,40 @@
+--- src/tweet.js	2015-11-08 16:05:03.000000000 -0800
++++ src/tweet_step_1.js	2015-11-08 16:08:16.000000000 -0800
+@@ -32,8 +32,8 @@
+     return (
+       <div className="twitter">
+         <h1>Tweets</h1>
+-        {/* Render TweetForm component here */}
+-        {/* Render TweetList component here */}
++        <TweetForm />
++        <TweetList />
+       </div>
+     );
+   }
+@@ -43,7 +43,7 @@
+   render: function () {
+     return (
+       <form className="tweetForm">
+-        {/* Render some text here */}
++        TweetForm component
+       </form>
+     );
+   }
+@@ -53,7 +53,7 @@
+   render: function () {
+     return (
+       <div className="tweetList">
+-        {/* Render some text here */}
++        TweetList component
+       </div>
+     );
+   }
+@@ -63,7 +63,7 @@
+   render: function () {
+     return (
+       <div className="tweet">
+-        {/* Render some text here */}
++        Tweet component
+       </div>
+     );
+   }

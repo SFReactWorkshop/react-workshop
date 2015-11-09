@@ -1,0 +1,13 @@
+--- src/tweet_step_3.js	2015-11-08 16:05:17.000000000 -0800
++++ src/tweet_step_4.js	2015-11-08 16:05:20.000000000 -0800
+@@ -35,7 +35,9 @@
+   render: function () {
+     return (
+       <form className="tweetForm">
+-        TweetForm component
++        <input type="text" placeholder="Author Name" />
++        <input type="text" placeholder="Tweet" />
++        <button type="submit" className="btn btn-info">Tweet</button>
+       </form>
+     );
+   }

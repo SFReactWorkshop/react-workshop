@@ -1,0 +1,4 @@
+*~
+node_modules
+build/scripts/.module-cache
+.DS_Store
