@@ -34,15 +34,9 @@ var ClickCounter = React.createClass({
 
 var ClickedNums = React.createClass({
   render: function () {
-    var array = [];
-
-    for (var i = 1; i <= this.props.number; i++) {
-      array.push(i);
-    }
-
     return (
-      <div className="container">
-        { array.toString() }
+      <div>
+        { this.props.number }
       </div>
     );
   }
