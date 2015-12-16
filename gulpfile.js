@@ -34,7 +34,7 @@ function buildScript(watch) {
   function rebundle() {
     var stream = bundler.bundle();
     return stream.on('error', handleErrors)
-      .pipe(source('bundle.min.js'))
+      .pipe(source('bundle.js'))
       .pipe(buffer())
       .pipe(gulp.dest(buildDir));
   }
