@@ -6,7 +6,6 @@ var gutil = require('gulp-util');
 var notify = require("gulp-notify");
 var reactify = require('reactify');
 var source = require('vinyl-source-stream');
-var uglify = require('gulp-uglify');
 var watchify = require('watchify');
 
 var entryFile = './src/app.js',
@@ -37,7 +36,6 @@ function buildScript(watch) {
     return stream.on('error', handleErrors)
       .pipe(source('bundle.min.js'))
       .pipe(buffer())
-      .pipe(uglify())
       .pipe(gulp.dest(buildDir));
   }
 

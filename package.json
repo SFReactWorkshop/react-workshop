@@ -12,7 +12,6 @@
     "gulp": "^3.9.0",
     "gulp-clean": "^0.3.1",
     "gulp-notify": "^2.2.0",
-    "gulp-uglify": "^1.4.1",
     "gulp-util": "^3.0.6",
     "reactify": "^1.1.1",
     "vinyl-buffer": "^1.0.0",
@@ -21,7 +20,7 @@
   },
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "node server.js"
+    "start": "node server.js & gulp"
   },
   "repository": {
     "type": "git",
