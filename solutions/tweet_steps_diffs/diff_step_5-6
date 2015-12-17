@@ -1,6 +1,6 @@
---- src/tweet_step_5.js	2015-11-08 16:05:23.000000000 -0800
-+++ src/tweet_step_6.js	2015-10-18 15:19:36.000000000 -0700
-@@ -9,13 +9,13 @@
+--- solutions/tweet_steps/tweet_step_5.js	2015-12-17 01:18:52.000000000 -0800
++++ solutions/tweet_steps/tweet_step_6.js	2015-12-17 01:19:32.000000000 -0800
+@@ -12,13 +12,13 @@
        }.bind(this)
      );
    },
@@ -21,7 +21,7 @@
    componentDidMount: function () {
      // Set this.state.data to most recent set of tweets from database
      this.loadTweetsFromServer();
-@@ -24,7 +24,7 @@
+@@ -27,7 +27,7 @@
      return (
        <div className="twitter">
          <h1>Tweets</h1>
@@ -30,7 +30,7 @@
          <TweetList data={ this.state.data } />
        </div>
      );
-@@ -46,7 +46,7 @@
+@@ -49,7 +49,7 @@
  
      // Send new author and text up one level to Twitter component
      // so updated tweets can be passed down again into TweetList component
@@ -38,4 +38,4 @@
 +    this.props.onTweetSubmit({ author: author, text: text });
  
      // Set input fields back to empty
-     React.findDOMNode(this.refs.author).value = '';
+     ReactDOM.findDOMNode(this.refs.author).value = '';

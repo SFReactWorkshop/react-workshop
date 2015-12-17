@@ -1,6 +1,6 @@
---- src/tweet_step_4.js	2015-11-08 16:05:20.000000000 -0800
-+++ src/tweet_step_5.js	2015-11-08 16:05:23.000000000 -0800
-@@ -32,11 +32,31 @@
+--- solutions/tweet_steps/tweet_step_4.js	2015-12-17 01:18:48.000000000 -0800
++++ solutions/tweet_steps/tweet_step_5.js	2015-12-17 01:18:52.000000000 -0800
+@@ -35,11 +35,31 @@
  });
  
  var TweetForm = React.createClass({
@@ -8,8 +8,8 @@
 +    e.preventDefault();
 +
 +    // Get new author and text from the input fields
-+    var author = React.findDOMNode(this.refs.author).value;
-+    var text = React.findDOMNode(this.refs.text).value;
++    var author = ReactDOM.findDOMNode(this.refs.author).value;
++    var text = ReactDOM.findDOMNode(this.refs.text).value;
 +
 +    // Do nothing if either input field is blank
 +    if (!text || !author) {
@@ -21,8 +21,8 @@
 +    alert('Send tweet data; author: ' + author + ', text: ' + text);
 +
 +    // Set input fields back to empty
-+    React.findDOMNode(this.refs.author).value = '';
-+    React.findDOMNode(this.refs.text).value = '';
++    ReactDOM.findDOMNode(this.refs.author).value = '';
++    ReactDOM.findDOMNode(this.refs.text).value = '';
 +  },
    render: function () {
      return (

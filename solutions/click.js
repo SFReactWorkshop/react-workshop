@@ -1,3 +1,6 @@
+var React = require('react');
+var ReactDOM = require('react-dom');
+
 /* define styles for your ClickCounter React Component here */
 var styles = {
   text: {
@@ -43,7 +46,7 @@ var ClickCounterCaption = React.createClass({
 });
 
 /* render your ClickCounter React Component here */
-React.render(
+ReactDOM.render(
   <ClickCounter text="Clicks" />,
   document.getElementById('click-counter')
 );

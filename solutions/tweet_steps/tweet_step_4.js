@@ -1,3 +1,6 @@
+var React = require('react');
+var ReactDOM = require('react-dom');
+
 var Twitter = React.createClass({
   getInitialState: function () {
     return { data: [] };
@@ -72,7 +75,7 @@ var Tweet = React.createClass({
   }
 });
 
-React.render(
+ReactDOM.render(
   <Twitter url="tweets.json" />,
   document.getElementById('tweets')
 );

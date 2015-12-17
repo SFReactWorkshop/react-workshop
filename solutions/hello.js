@@ -1,3 +1,6 @@
+var React = require('react');
+var ReactDOM = require('react-dom');
+
 /* create your Hello React Component here */
 var Hello = React.createClass({
   getInitialState: function() {
@@ -22,7 +25,7 @@ var Hello = React.createClass({
 });
 
 /* render your Hello React Component here */
-React.render(
+ReactDOM.render(
   <Hello title="React Example" />,
   document.getElementById('hello')
 );

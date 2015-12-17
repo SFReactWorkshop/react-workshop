@@ -1,3 +1,6 @@
+var React = require('react');
+var ReactDOM = require('react-dom');
+
 var Twitter = React.createClass({
   getInitialState: function () {
     return { data: [] };
@@ -36,8 +39,8 @@ var TweetForm = React.createClass({
     e.preventDefault();
 
     // Get new author and text from the input fields
-    var author = React.findDOMNode(this.refs.author).value;
-    var text = React.findDOMNode(this.refs.text).value;
+    var author = ReactDOM.findDOMNode(this.refs.author).value;
+    var text = ReactDOM.findDOMNode(this.refs.text).value;
 
     // Do nothing if either input field is blank
     if (!text || !author) {
@@ -49,8 +52,8 @@ var TweetForm = React.createClass({
     this.props.onTweetSubmit({ author: author, text: text });
 
     // Set input fields back to empty
-    React.findDOMNode(this.refs.author).value = '';
-    React.findDOMNode(this.refs.text).value = '';
+    ReactDOM.findDOMNode(this.refs.author).value = '';
+    ReactDOM.findDOMNode(this.refs.text).value = '';
   },
   render: function () {
     return (
@@ -92,7 +95,7 @@ var Tweet = React.createClass({
   }
 });
 
-React.render(
+ReactDOM.render(
   <Twitter url="tweets.json" />,
   document.getElementById('tweets')
 );

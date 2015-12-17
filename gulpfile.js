@@ -1,10 +1,10 @@
+var babelify = require('babelify')
 var browserify = require('browserify');
 var buffer = require('vinyl-buffer');
 var clean = require('gulp-clean');
 var gulp = require('gulp');
 var gutil = require('gulp-util');
 var notify = require("gulp-notify");
-var reactify = require('reactify');
 var source = require('vinyl-source-stream');
 var watchify = require('watchify');
 
@@ -29,7 +29,7 @@ function buildScript(watch) {
   };
 
   var bundler = watch ? watchify(browserify(props)) : browserify(props);
-  bundler.transform(reactify);
+  bundler.transform(babelify, { presets: ['react'] });
   
   function rebundle() {
     var stream = bundler.bundle();

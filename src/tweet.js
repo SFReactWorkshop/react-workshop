@@ -1,3 +1,6 @@
+var React = require('react');
+var ReactDOM = require('react-dom');
+
 var data = [
   {
       "author": "Michael Scott",
@@ -69,7 +72,7 @@ var Tweet = React.createClass({
   }
 });
 
-React.render(
+ReactDOM.render(
   <Twitter />,
   document.getElementById('tweets')
 );

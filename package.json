@@ -4,8 +4,12 @@
   "description": "CoderCourse.io React Tutorial",
   "main": "server.js",
   "dependencies": {
+    "babel-preset-react": "^6.3.13",
+    "babelify": "^7.2.0",
     "body-parser": "^1.4.3",
-    "express": "^4.4.5"
+    "express": "^4.4.5",
+    "react": "^0.14.3",
+    "react-dom": "^0.14.3"
   },
   "devDependencies": {
     "browserify": "^11.2.0",
@@ -13,7 +17,6 @@
     "gulp-clean": "^0.3.1",
     "gulp-notify": "^2.2.0",
     "gulp-util": "^3.0.6",
-    "reactify": "^1.1.1",
     "vinyl-buffer": "^1.0.0",
     "vinyl-source-stream": "^1.1.0",
     "watchify": "^3.4.0"

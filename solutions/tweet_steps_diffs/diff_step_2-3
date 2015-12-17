@@ -1,6 +1,9 @@
---- src/tweet_step_2.js	2015-11-08 16:05:13.000000000 -0800
-+++ src/tweet_step_3.js	2015-11-08 16:05:17.000000000 -0800
-@@ -1,22 +1,14 @@
+--- solutions/tweet_steps/tweet_step_2.js	2015-12-17 01:18:41.000000000 -0800
++++ solutions/tweet_steps/tweet_step_3.js	2015-12-17 01:18:45.000000000 -0800
+@@ -1,25 +1,17 @@
+ var React = require('react');
+ var ReactDOM = require('react-dom');
+ 
 -var data = [
 -  {
 -      "author": "Michael Scott",
@@ -33,7 +36,7 @@
    // handleTweetSubmit: function (tweet) {
    //   // POST to add tweet to database
    //   $.post(this.props.url, tweet, function (data) {
-@@ -24,16 +16,16 @@
+@@ -27,16 +19,16 @@
    //     }.bind(this)
    //   );
    // },
@@ -55,10 +58,10 @@
        </div>
      );
    }
-@@ -79,6 +71,6 @@
+@@ -82,6 +74,6 @@
  });
  
- React.render(
+ ReactDOM.render(
 -  <Twitter data={data} />,
 +  <Twitter url="tweets.json" />,
    document.getElementById('tweets')
