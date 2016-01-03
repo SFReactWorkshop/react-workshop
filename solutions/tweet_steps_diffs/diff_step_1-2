@@ -1,5 +1,5 @@
---- solutions/tweet_steps/tweet_step_1.js	2015-12-17 01:18:35.000000000 -0800
-+++ solutions/tweet_steps/tweet_step_2.js	2015-12-17 01:18:41.000000000 -0800
+--- solutions/tweet_steps/tweet_step_1.js	2016-01-03 15:36:27.000000000 -0800
++++ solutions/tweet_steps/tweet_step_2.js	2016-01-03 15:36:33.000000000 -0800
 @@ -36,7 +36,7 @@
        <div className="twitter">
          <h1>Tweets</h1>
@@ -9,33 +9,16 @@
        </div>
      );
    }
-@@ -56,7 +56,15 @@
+@@ -56,7 +56,7 @@
    render: function () {
      return (
        <div className="tweetList">
 -        TweetList component
-+        {
-+          this.props.data.map(function(tweet, idx) {
-+            return (
-+              // 'key' is a React-specific concept, but not mandatory for this tutorial
-+              // http://facebook.github.io/react/docs/multiple-components.html#dynamic-children
-+              <Tweet key={ idx } author={ tweet.author } text={ tweet.text } />
-+            );
-+          })
-+        }
++        { JSON.stringify(this.props.data) }
        </div>
      );
    }
-@@ -66,13 +74,14 @@
-   render: function () {
-     return (
-       <div className="tweet">
--        Tweet component
-+        <h2 className="tweetText">{ this.props.text }</h2>
-+        <span className="tweetAuthor"> - { this.props.author }</span>
-       </div>
-     );
-   }
+@@ -73,6 +73,6 @@
  });
  
  ReactDOM.render(

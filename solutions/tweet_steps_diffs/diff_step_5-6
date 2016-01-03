@@ -1,41 +1,46 @@
---- solutions/tweet_steps/tweet_step_5.js	2015-12-17 01:18:52.000000000 -0800
-+++ solutions/tweet_steps/tweet_step_6.js	2015-12-17 01:19:32.000000000 -0800
-@@ -12,13 +12,13 @@
-       }.bind(this)
-     );
+--- solutions/tweet_steps/tweet_step_5.js	2016-01-03 15:36:43.000000000 -0800
++++ solutions/tweet_steps/tweet_step_6.js	2016-01-03 15:36:49.000000000 -0800
+@@ -5,13 +5,13 @@
+   getInitialState: function () {
+     return { data: [] };
    },
--  // handleTweetSubmit: function (tweet) {
--  //   // POST to add tweet to database
--  //   $.post(this.props.url, tweet, function (data) {
+-  // loadTweetsFromServer: function () {
+-  //   // GET updated set of tweets from database
+-  //   $.get(this.props.url, function (data) {
 -  //       // Set state in step 6 of the exercise!
 -  //     }.bind(this)
 -  //   );
 -  // },
-+  handleTweetSubmit: function (tweet) {
-+    // POST to add tweet to database
-+    $.post(this.props.url, tweet, function (data) {
++  loadTweetsFromServer: function () {
++    // GET updated set of tweets from database
++    $.get(this.props.url, function (data) {
 +        this.setState({ data: data });
 +      }.bind(this)
 +    );
 +  },
-   componentDidMount: function () {
-     // Set this.state.data to most recent set of tweets from database
-     this.loadTweetsFromServer();
-@@ -27,7 +27,7 @@
+   // handleTweetSubmit: function (tweet) {
+   //   // POST to add tweet to database
+   //   $.post(this.props.url, tweet, function (data) {
+@@ -19,10 +19,10 @@
+   //     }.bind(this)
+   //   );
+   // },
+-  // componentDidMount: function () {
+-  //   // Set this.state.data to most recent set of tweets from database
+-  //   this.loadTweetsFromServer();
+-  // },
++  componentDidMount: function () {
++    // Set this.state.data to most recent set of tweets from database
++    this.loadTweetsFromServer();
++  },
+   render: function () {
      return (
        <div className="twitter">
-         <h1>Tweets</h1>
--        <TweetForm />
-+        <TweetForm onTweetSubmit={ this.handleTweetSubmit } />
-         <TweetList data={ this.state.data } />
-       </div>
-     );
-@@ -49,7 +49,7 @@
+@@ -73,6 +73,6 @@
+ });
  
-     // Send new author and text up one level to Twitter component
-     // so updated tweets can be passed down again into TweetList component
--    alert('Send tweet data; author: ' + author + ', text: ' + text);
-+    this.props.onTweetSubmit({ author: author, text: text });
- 
-     // Set input fields back to empty
-     ReactDOM.findDOMNode(this.refs.author).value = '';
+ ReactDOM.render(
+-  <Twitter />,
++  <Twitter url="tweets.json" />,
+   document.getElementById('tweets')
+ );

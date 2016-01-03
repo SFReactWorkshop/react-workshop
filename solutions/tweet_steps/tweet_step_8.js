@@ -35,10 +35,17 @@ var Twitter = React.createClass({
 });
 
 var TweetForm = React.createClass({
+  handleSubmit: function(e) {
+    e.preventDefault();
+
+    alert('You submitted the form!');
+  },
   render: function () {
     return (
-      <form className="tweetForm">
-        TweetForm component
+      <form className="tweetForm" onSubmit={ this.handleSubmit }>
+        <input type="text" placeholder="Author Name" />
+        <input type="text" placeholder="Tweet" />
+        <button type="submit" className="btn btn-info">Tweet</button>
       </form>
     );
   }

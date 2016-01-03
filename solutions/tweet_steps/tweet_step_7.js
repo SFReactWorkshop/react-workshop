@@ -38,7 +38,9 @@ var TweetForm = React.createClass({
   render: function () {
     return (
       <form className="tweetForm">
-        TweetForm component
+        <input type="text" placeholder="Author Name" />
+        <input type="text" placeholder="Tweet" />
+        <button type="submit" className="btn btn-info">Tweet</button>
       </form>
     );
   }

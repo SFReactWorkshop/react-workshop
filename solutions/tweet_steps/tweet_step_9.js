@@ -35,10 +35,30 @@ var Twitter = React.createClass({
 });
 
 var TweetForm = React.createClass({
+  handleSubmit: function(e) {
+    e.preventDefault();
+
+    // Get new author and text from the input fields
+    var author = this.refs.author.value;
+    var text = this.refs.text.value;
+
+    // Do nothing if either input field is blank
+    if (!text || !author) {
+      return;
+    }
+
+    alert('Send tweet data; author: ' + author + ', text: ' + text);
+
+    // Set input fields back to empty
+    this.refs.author.value = '';
+    this.refs.text.value = '';
+  },
   render: function () {
     return (
-      <form className="tweetForm">
-        TweetForm component
+      <form className="tweetForm" onSubmit={ this.handleSubmit }>
+        <input type="text" placeholder="Author Name" ref="author" />
+        <input type="text" placeholder="Tweet" ref="text" />
+        <button type="submit" className="btn btn-info">Tweet</button>
       </form>
     );
   }

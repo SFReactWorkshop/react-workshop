@@ -1,37 +1,41 @@
---- solutions/tweet_steps/tweet_step_4.js	2015-12-17 01:18:48.000000000 -0800
-+++ solutions/tweet_steps/tweet_step_5.js	2015-12-17 01:18:52.000000000 -0800
-@@ -35,11 +35,31 @@
+--- solutions/tweet_steps/tweet_step_4.js	2016-01-03 15:36:40.000000000 -0800
++++ solutions/tweet_steps/tweet_step_5.js	2016-01-03 15:36:43.000000000 -0800
+@@ -1,18 +1,10 @@
+ var React = require('react');
+ var ReactDOM = require('react-dom');
+ 
+-var data = [
+-  {
+-      "author": "Michael Scott",
+-      "text": "Would I rather be feared or loved? Easy, both. I want people to be afraid of how much they love me."
+-  },
+-  {
+-      "author": "Jeff Bezos",
+-      "text": "In the end, we are our choices."
+-  }
+-];
+-
+ var Twitter = React.createClass({
++  getInitialState: function () {
++    return { data: [] };
++  },
+   // loadTweetsFromServer: function () {
+   //   // GET updated set of tweets from database
+   //   $.get(this.props.url, function (data) {
+@@ -36,7 +28,7 @@
+       <div className="twitter">
+         <h1>Tweets</h1>
+         <TweetForm />
+-        <TweetList data={ this.props.data } />
++        <TweetList data={ this.state.data } />
+       </div>
+     );
+   }
+@@ -81,6 +73,6 @@
  });
  
- var TweetForm = React.createClass({
-+  handleSubmit: function(e) {
-+    e.preventDefault();
-+
-+    // Get new author and text from the input fields
-+    var author = ReactDOM.findDOMNode(this.refs.author).value;
-+    var text = ReactDOM.findDOMNode(this.refs.text).value;
-+
-+    // Do nothing if either input field is blank
-+    if (!text || !author) {
-+      return;
-+    }
-+
-+    // Send new author and text up one level to Twitter component
-+    // so updated tweets can be passed down again into TweetList component
-+    alert('Send tweet data; author: ' + author + ', text: ' + text);
-+
-+    // Set input fields back to empty
-+    ReactDOM.findDOMNode(this.refs.author).value = '';
-+    ReactDOM.findDOMNode(this.refs.text).value = '';
-+  },
-   render: function () {
-     return (
--      <form className="tweetForm">
--        <input type="text" placeholder="Author Name" />
--        <input type="text" placeholder="Tweet" />
-+      <form className="tweetForm" onSubmit={ this.handleSubmit }>
-+        <input type="text" placeholder="Author Name" ref="author" />
-+        <input type="text" placeholder="Tweet" ref="text" />
-         <button type="submit" className="btn btn-info">Tweet</button>
-       </form>
-     );
+ ReactDOM.render(
+-  <Twitter data={data} />,
++  <Twitter />,
+   document.getElementById('tweets')
+ );
