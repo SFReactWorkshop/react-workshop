@@ -1,5 +1,5 @@
---- solutions/tweet_steps/tweet_step_5.js	2016-01-03 15:36:43.000000000 -0800
-+++ solutions/tweet_steps/tweet_step_6.js	2016-01-03 15:36:49.000000000 -0800
+--- solutions/tweet_steps/tweet_step_5.js	2016-01-03 19:58:26.000000000 -0800
++++ solutions/tweet_steps/tweet_step_6.js	2016-01-03 19:58:22.000000000 -0800
 @@ -5,13 +5,13 @@
    getInitialState: function () {
      return { data: [] };
@@ -18,10 +18,10 @@
 +      }.bind(this)
 +    );
 +  },
-   // handleTweetSubmit: function (tweet) {
-   //   // POST to add tweet to database
-   //   $.post(this.props.url, tweet, function (data) {
-@@ -19,10 +19,10 @@
+   // handleTweetSubmit: function (author, text) {
+   //   var tweet = { author: author, text: text };
+   //
+@@ -21,10 +21,10 @@
    //     }.bind(this)
    //   );
    // },
@@ -36,7 +36,7 @@
    render: function () {
      return (
        <div className="twitter">
-@@ -73,6 +73,6 @@
+@@ -75,6 +75,6 @@
  });
  
  ReactDOM.render(

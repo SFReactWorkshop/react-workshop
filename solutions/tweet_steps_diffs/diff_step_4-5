@@ -1,5 +1,5 @@
---- solutions/tweet_steps/tweet_step_4.js	2016-01-03 15:36:40.000000000 -0800
-+++ solutions/tweet_steps/tweet_step_5.js	2016-01-03 15:36:43.000000000 -0800
+--- solutions/tweet_steps/tweet_step_4.js	2016-01-03 19:58:30.000000000 -0800
++++ solutions/tweet_steps/tweet_step_5.js	2016-01-03 19:58:26.000000000 -0800
 @@ -1,18 +1,10 @@
  var React = require('react');
  var ReactDOM = require('react-dom');
@@ -22,7 +22,7 @@
    // loadTweetsFromServer: function () {
    //   // GET updated set of tweets from database
    //   $.get(this.props.url, function (data) {
-@@ -36,7 +28,7 @@
+@@ -38,7 +30,7 @@
        <div className="twitter">
          <h1>Tweets</h1>
          <TweetForm />
@@ -31,7 +31,7 @@
        </div>
      );
    }
-@@ -81,6 +73,6 @@
+@@ -83,6 +75,6 @@
  });
  
  ReactDOM.render(

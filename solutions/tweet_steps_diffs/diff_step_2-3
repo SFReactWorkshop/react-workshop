@@ -1,6 +1,6 @@
---- solutions/tweet_steps/tweet_step_2.js	2016-01-03 15:36:33.000000000 -0800
-+++ solutions/tweet_steps/tweet_step_3.js	2016-01-03 15:36:36.000000000 -0800
-@@ -54,9 +54,16 @@
+--- solutions/tweet_steps/tweet_step_2.js	2016-01-03 19:58:36.000000000 -0800
++++ solutions/tweet_steps/tweet_step_3.js	2016-01-03 19:58:33.000000000 -0800
+@@ -56,9 +56,16 @@
  
  var TweetList = React.createClass({
    render: function () {
@@ -18,7 +18,7 @@
        </div>
      );
    }
-@@ -66,7 +73,8 @@
+@@ -68,7 +75,8 @@
    render: function () {
      return (
        <div className="tweet">

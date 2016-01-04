@@ -1,6 +1,6 @@
---- solutions/tweet_steps/tweet_step_1.js	2016-01-03 15:36:27.000000000 -0800
-+++ solutions/tweet_steps/tweet_step_2.js	2016-01-03 15:36:33.000000000 -0800
-@@ -36,7 +36,7 @@
+--- solutions/tweet_steps/tweet_step_1.js	2016-01-03 19:58:45.000000000 -0800
++++ solutions/tweet_steps/tweet_step_2.js	2016-01-03 19:58:36.000000000 -0800
+@@ -38,7 +38,7 @@
        <div className="twitter">
          <h1>Tweets</h1>
          <TweetForm />
@@ -9,7 +9,7 @@
        </div>
      );
    }
-@@ -56,7 +56,7 @@
+@@ -58,7 +58,7 @@
    render: function () {
      return (
        <div className="tweetList">
@@ -18,7 +18,7 @@
        </div>
      );
    }
-@@ -73,6 +73,6 @@
+@@ -75,6 +75,6 @@
  });
  
  ReactDOM.render(

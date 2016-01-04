@@ -12,7 +12,9 @@ var Twitter = React.createClass({
       }.bind(this)
     );
   },
-  handleTweetSubmit: function (tweet) {
+  handleTweetSubmit: function (author, text) {
+    var tweet = { author: author, text: text };
+
     // POST to add tweet to database
     $.post(this.props.url, tweet, function (data) {
         this.setState({ data: data });
@@ -49,7 +51,7 @@ var TweetForm = React.createClass({
 
     // Send new author and text up one level to Twitter component
     // so updated tweets can be passed down again into TweetList component
-    this.props.onTweetSubmit({ author: author, text: text });
+    this.props.onTweetSubmit(author, text);
 
     // Set input fields back to empty
     this.refs.author.value = '';

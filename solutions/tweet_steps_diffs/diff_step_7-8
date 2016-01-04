@@ -1,6 +1,6 @@
---- solutions/tweet_steps/tweet_step_7.js	2016-01-03 15:36:53.000000000 -0800
-+++ solutions/tweet_steps/tweet_step_8.js	2016-01-03 15:36:56.000000000 -0800
-@@ -35,9 +35,14 @@
+--- solutions/tweet_steps/tweet_step_7.js	2016-01-03 19:58:19.000000000 -0800
++++ solutions/tweet_steps/tweet_step_8.js	2016-01-03 19:58:15.000000000 -0800
+@@ -37,9 +37,14 @@
  });
  
  var TweetForm = React.createClass({
