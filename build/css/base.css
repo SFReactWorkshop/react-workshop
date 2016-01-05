@@ -33,9 +33,13 @@ body {
 }
 
 /* Dropdown Exercise Styles */
+.dropdown-wrapper > button {
+  width: 100%;
+}
+
 .dropdown-wrapper > ul {
   padding: 0;
-  width: 130px;
+  width: 100%;
 }
 
 .dropdown-wrapper li {
@@ -48,6 +52,18 @@ body {
 .dropdown-wrapper li:hover {
   color: white;
   background-color: orange;
+}
+
+/* 
+For DropdownMenu appearance styles exercise: 
+Define your custom class below.
+*/
+.my-custom-class {
+  /* 
+  font-style: italic;
+  font-weight: 600;
+  font-family: 'Monotype'; 
+  */
 }
 
 /* Twitter Exercise Styles */
