@@ -32,6 +32,25 @@ body {
   padding-left: 40px;
 }
 
+/* Dropdown Exercise Styles */
+.dropdown-wrapper > ul {
+  padding: 0;
+  width: 130px;
+}
+
+.dropdown-wrapper li {
+  list-style: none;
+  padding: 5px 10px;
+  border: 1px solid lightgray;
+  box-sizing: border-box;
+}
+
+.dropdown-wrapper li:hover {
+  color: white;
+  background-color: orange;
+}
+
+/* Twitter Exercise Styles */
 .tweetForm {
   margin: 20px 0px;
 }
