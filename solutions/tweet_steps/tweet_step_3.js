@@ -1,34 +1,44 @@
 var React = require('react');
 var ReactDOM = require('react-dom');
 
+var data = [
+  {
+      "author": "Michael Scott",
+      "text": "Would I rather be feared or loved? Easy, both. I want people to be afraid of how much they love me."
+  },
+  {
+      "author": "Jeff Bezos",
+      "text": "In the end, we are our choices."
+  }
+];
+
 var Twitter = React.createClass({
-  getInitialState: function () {
-    return { data: [] };
-  },
-  loadTweetsFromServer: function () {
-    // GET updated set of tweets from database
-    $.get(this.props.url, function (data) {
-        this.setState({ data: data });
-      }.bind(this)
-    );
-  },
-  // handleTweetSubmit: function (tweet) {
-  //   // POST to add tweet to database
-  //   $.post(this.props.url, tweet, function (data) {
+  // loadTweetsFromServer: function () {
+  //   // GET updated set of tweets from database
+  //   $.get(this.props.url, function (data) {
   //       // Set state in step 6 of the exercise!
   //     }.bind(this)
   //   );
   // },
-  componentDidMount: function () {
-    // Set this.state.data to most recent set of tweets from database
-    this.loadTweetsFromServer();
-  },
+  // handleTweetSubmit: function (author, text) {
+  //   var tweet = { author: author, text: text };
+  //
+  //   // POST to add tweet to database
+  //   $.post(this.props.url, tweet, function (data) {
+  //       // Set state in step 10 of the exercise!
+  //     }.bind(this)
+  //   );
+  // },
+  // componentDidMount: function () {
+  //   // Set this.state.data to most recent set of tweets from database
+  //   this.loadTweetsFromServer();
+  // },
   render: function () {
     return (
       <div className="twitter">
         <h1>Tweets</h1>
         <TweetForm />
-        <TweetList data={ this.state.data } />
+        <TweetList data={ this.props.data } />
       </div>
     );
   }
@@ -46,16 +56,15 @@ var TweetForm = React.createClass({
 
 var TweetList = React.createClass({
   render: function () {
+    var data = this.props.data;
+
     return (
       <div className="tweetList">
         {
-          this.props.data.map(function(tweet, idx) {
-            return (
-              // 'key' is a React-specific concept, but not mandatory for this tutorial
-              // http://facebook.github.io/react/docs/multiple-components.html#dynamic-children
-              <Tweet key={ idx } author={ tweet.author } text={ tweet.text } />
-            );
-          })
+          [
+            <Tweet author={ data[0].author } text={ data[0].text } />,
+            <Tweet author={ data[1].author } text={ data[1].text } />
+          ]
         }
       </div>
     );
@@ -66,14 +75,14 @@ var Tweet = React.createClass({
   render: function () {
     return (
       <div className="tweet">
-        <h2 className="tweetText">{ this.props.text }</h2>
-        <span className="tweetAuthor"> - { this.props.author }</span>
+        <h2>{ this.props.text }</h2>
+        <span> - { this.props.author }</span>
       </div>
     );
   }
 });
 
 ReactDOM.render(
-  <Twitter url="tweets.json" />,
+  <Twitter data={data} />,
   document.getElementById('tweets')
 );

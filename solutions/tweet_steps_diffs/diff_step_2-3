@@ -1,68 +1,30 @@
---- solutions/tweet_steps/tweet_step_2.js	2015-12-17 01:18:41.000000000 -0800
-+++ solutions/tweet_steps/tweet_step_3.js	2015-12-17 01:18:45.000000000 -0800
-@@ -1,25 +1,17 @@
- var React = require('react');
- var ReactDOM = require('react-dom');
+--- solutions/tweet_steps/tweet_step_2.js	2016-01-03 19:58:36.000000000 -0800
++++ solutions/tweet_steps/tweet_step_3.js	2016-01-03 19:58:33.000000000 -0800
+@@ -56,9 +56,16 @@
  
--var data = [
--  {
--      "author": "Michael Scott",
--      "text": "Would I rather be feared or loved? Easy, both. I want people to be afraid of how much they love me."
--  },
--  {
--      "author": "Jeff Bezos",
--      "text": "In the end, we are our choices."
--  }
--];
--
- var Twitter = React.createClass({
--  // loadTweetsFromServer: function () {
--  //   // GET updated set of tweets from database
--  //   $.get(this.props.url, function (data) {
--  //       // Set state in step 3 of the exercise!
--  //     }.bind(this)
--  //   );
--  // },
-+  getInitialState: function () {
-+    return { data: [] };
-+  },
-+  loadTweetsFromServer: function () {
-+    // GET updated set of tweets from database
-+    $.get(this.props.url, function (data) {
-+        this.setState({ data: data });
-+      }.bind(this)
-+    );
-+  },
-   // handleTweetSubmit: function (tweet) {
-   //   // POST to add tweet to database
-   //   $.post(this.props.url, tweet, function (data) {
-@@ -27,16 +19,16 @@
-   //     }.bind(this)
-   //   );
-   // },
--  // componentDidMount: function () {
--  //   // Set this.state.data to most recent set of tweets from database
--  //   this.loadTweetsFromServer();
--  // },
-+  componentDidMount: function () {
-+    // Set this.state.data to most recent set of tweets from database
-+    this.loadTweetsFromServer();
-+  },
+ var TweetList = React.createClass({
    render: function () {
++    var data = this.props.data;
++
      return (
-       <div className="twitter">
-         <h1>Tweets</h1>
-         <TweetForm />
--        <TweetList data={ this.props.data } />
-+        <TweetList data={ this.state.data } />
+       <div className="tweetList">
+-        { JSON.stringify(this.props.data) }
++        {
++          [
++            <Tweet author={ data[0].author } text={ data[0].text } />,
++            <Tweet author={ data[1].author } text={ data[1].text } />
++          ]
++        }
        </div>
      );
    }
-@@ -82,6 +74,6 @@
- });
- 
- ReactDOM.render(
--  <Twitter data={data} />,
-+  <Twitter url="tweets.json" />,
-   document.getElementById('tweets')
- );
+@@ -68,7 +75,8 @@
+   render: function () {
+     return (
+       <div className="tweet">
+-        Tweet component
++        <h2>{ this.props.text }</h2>
++        <span> - { this.props.author }</span>
+       </div>
+     );
+   }
