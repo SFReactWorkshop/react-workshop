@@ -1,5 +1,5 @@
---- solutions/tweet_steps/tweet_step_8.js	2016-01-12 03:29:35.000000000 -0800
-+++ solutions/tweet_steps/tweet_step_9.js	2016-01-12 03:29:52.000000000 -0800
+--- solutions/tweet_steps/tweet_step_8.js	2016-01-16 17:28:23.000000000 -0800
++++ solutions/tweet_steps/tweet_step_9.js	2016-01-16 17:28:23.000000000 -0800
 @@ -40,13 +40,26 @@
    handleSubmit: function(e) {
      e.preventDefault();

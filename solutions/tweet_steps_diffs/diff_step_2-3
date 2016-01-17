@@ -1,30 +1,18 @@
 --- solutions/tweet_steps/tweet_step_2.js	2016-01-10 16:31:54.000000000 -0800
-+++ solutions/tweet_steps/tweet_step_3.js	2016-01-10 16:31:54.000000000 -0800
-@@ -56,9 +56,16 @@
++++ solutions/tweet_steps/tweet_step_3.js	2016-01-16 17:29:07.000000000 -0800
+@@ -56,9 +56,14 @@
  
  var TweetList = React.createClass({
    render: function () {
 +    var data = this.props.data;
++    var tweetNodes = data.map(function () {
++      return <Tweet />
++    });
 +
      return (
        <div className="tweetList">
 -        { JSON.stringify(this.props.data) }
-+        {
-+          [
-+            <Tweet author={ data[0].author } text={ data[0].text } />,
-+            <Tweet author={ data[1].author } text={ data[1].text } />
-+          ]
-+        }
-       </div>
-     );
-   }
-@@ -68,7 +75,8 @@
-   render: function () {
-     return (
-       <div className="tweet">
--        Tweet component
-+        <h2>{ this.props.text }</h2>
-+        <span> - { this.props.author }</span>
++        { tweetNodes }
        </div>
      );
    }
