@@ -1,5 +1,5 @@
---- solutions/tweet_steps/tweet_step_1.js	2016-01-03 19:58:45.000000000 -0800
-+++ solutions/tweet_steps/tweet_step_2.js	2016-01-03 19:58:36.000000000 -0800
+--- solutions/tweet_steps/tweet_step_1.js	2016-01-10 16:31:54.000000000 -0800
++++ solutions/tweet_steps/tweet_step_2.js	2016-01-10 16:31:54.000000000 -0800
 @@ -38,7 +38,7 @@
        <div className="twitter">
          <h1>Tweets</h1>

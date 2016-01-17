@@ -1,5 +1,5 @@
---- solutions/tweet_steps/tweet_step_5.js	2016-01-03 19:58:26.000000000 -0800
-+++ solutions/tweet_steps/tweet_step_6.js	2016-01-03 19:58:22.000000000 -0800
+--- solutions/tweet_steps/tweet_step_5.js	2016-01-12 03:29:00.000000000 -0800
++++ solutions/tweet_steps/tweet_step_6.js	2016-01-12 03:29:11.000000000 -0800
 @@ -5,13 +5,13 @@
    getInitialState: function () {
      return { data: [] };
@@ -36,7 +36,7 @@
    render: function () {
      return (
        <div className="twitter">
-@@ -75,6 +75,6 @@
+@@ -73,6 +73,6 @@
  });
  
  ReactDOM.render(

@@ -1,5 +1,5 @@
---- solutions/tweet_steps/tweet_step_4.js	2016-01-03 19:58:30.000000000 -0800
-+++ solutions/tweet_steps/tweet_step_5.js	2016-01-03 19:58:26.000000000 -0800
+--- solutions/tweet_steps/tweet_step_4.js	2016-01-12 03:28:43.000000000 -0800
++++ solutions/tweet_steps/tweet_step_5.js	2016-01-12 03:29:00.000000000 -0800
 @@ -1,18 +1,10 @@
  var React = require('react');
  var ReactDOM = require('react-dom');
@@ -31,7 +31,7 @@
        </div>
      );
    }
-@@ -83,6 +75,6 @@
+@@ -81,6 +73,6 @@
  });
  
  ReactDOM.render(

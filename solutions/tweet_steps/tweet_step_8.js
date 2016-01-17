@@ -56,10 +56,8 @@ var TweetForm = React.createClass({
 var TweetList = React.createClass({
   render: function () {
     var data = this.props.data;
-    var tweetNodes = data.map(function (tweet, idx) {
-      // 'key' is a React-specific concept, but not mandatory for this tutorial
-      // http://facebook.github.io/react/docs/multiple-components.html#dynamic-children
-      return <Tweet key={ idx } author={ tweet.author } text={ tweet.text } />
+    var tweetNodes = data.map(function (tweet) {
+      return <Tweet author={ tweet.author } text={ tweet.text } />
     });
 
     return (

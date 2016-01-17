@@ -1,5 +1,5 @@
---- src/tweet.js	2016-01-03 20:00:03.000000000 -0800
-+++ solutions/tweet_steps/tweet_step_1.js	2016-01-03 19:58:45.000000000 -0800
+--- src/tweet.js	2016-01-10 16:34:31.000000000 -0800
++++ solutions/tweet_steps/tweet_step_1.js	2016-01-10 16:31:54.000000000 -0800
 @@ -37,8 +37,8 @@
      return (
        <div className="twitter">

@@ -1,5 +1,5 @@
---- solutions/tweet_steps/tweet_step_7.js	2016-01-03 19:58:19.000000000 -0800
-+++ solutions/tweet_steps/tweet_step_8.js	2016-01-03 19:58:15.000000000 -0800
+--- solutions/tweet_steps/tweet_step_7.js	2016-01-12 03:29:28.000000000 -0800
++++ solutions/tweet_steps/tweet_step_8.js	2016-01-12 03:29:35.000000000 -0800
 @@ -37,9 +37,14 @@
  });
  
