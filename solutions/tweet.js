@@ -70,8 +70,8 @@ var TweetForm = React.createClass({
 
 var TweetList = React.createClass({
   render: function () {
-    var data = this.props.data;
-    var tweetNodes = data.map(function (tweet) {
+    var tweetData = this.props.data;
+    var tweetNodes = tweetData.map(function (tweet) {
       return <Tweet author={ tweet.author } text={ tweet.text } />
     });
 

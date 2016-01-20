@@ -1,11 +1,11 @@
 --- solutions/tweet_steps/tweet_step_2.js	2016-01-10 16:31:54.000000000 -0800
-+++ solutions/tweet_steps/tweet_step_3.js	2016-01-16 17:29:07.000000000 -0800
++++ solutions/tweet_steps/tweet_step_3.js	2016-01-20 03:08:36.000000000 -0800
 @@ -56,9 +56,14 @@
  
  var TweetList = React.createClass({
    render: function () {
-+    var data = this.props.data;
-+    var tweetNodes = data.map(function () {
++    var tweetData = this.props.data;
++    var tweetNodes = tweetData.map(function () {
 +      return <Tweet />
 +    });
 +
