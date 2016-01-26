@@ -1,16 +1,6 @@
 var React = require('react');
 var ReactDOM = require('react-dom');
 
-/* define styles for your ClickCounter React Component here */
-var styles = {
-  even: {
-    backgroundColor: 'pink'
-  }, 
-  odd: {
-    backgroundColor: 'green'
-  }
-};
-
 /* create your ClickCounter React Component here */
 var ClickCounter = React.createClass({
   getInitialState: function () {
@@ -21,11 +11,9 @@ var ClickCounter = React.createClass({
     this.setState({ clicks: this.state.clicks + 1 });
   },
   render: function () {
-    var isEven = this.state.clicks % 2 == 0;
-
     return (
       <div>
-        <button className="btn btn-primary" style={ isEven ? styles.even : styles.odd } onClick={ this.handleBtnClick }>
+        <button className="btn btn-primary" onClick={ this.handleBtnClick }>
           { this.props.text } <span className="badge">{ this.state.clicks }</span>
         </button>
 
