@@ -1,6 +1,8 @@
 /* Dropdown Exercise Styles */
 .dropdown-wrapper > button {
   width: 100%;
+  white-space: normal;
+  word-wrap: break-word;
 }
 
 .dropdown-wrapper > ul {
