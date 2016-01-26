@@ -32,28 +32,6 @@ body {
   padding-left: 40px;
 }
 
-/* Dropdown Exercise Styles */
-.dropdown-wrapper > button {
-  width: 100%;
-}
-
-.dropdown-wrapper > ul {
-  padding: 0;
-  width: 100%;
-}
-
-.dropdown-wrapper li {
-  list-style: none;
-  padding: 5px 10px;
-  border: 1px solid lightgray;
-  box-sizing: border-box;
-}
-
-.dropdown-wrapper li:hover {
-  color: white;
-  background-color: orange;
-}
-
 /* 
 For DropdownMenu appearance styles exercise: 
 Define your custom class below.
@@ -65,9 +43,3 @@ Define your custom class below.
   font-family: 'Monotype'; 
   */
 }
-
-/* Twitter Exercise Styles */
-.tweetForm {
-  margin: 20px 0px;
-}
-
